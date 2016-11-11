@@ -2,9 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hi coursera</title>
+    <script src="https://code.angularjs.org/1.5.8/angular.min.js""></script>
+    <script src="app.js"></script>
+    <style>{font size:1.3em;}</style>
+    <title>Name Calculator</title>
   </head>
-  <body>
-    <h1>Hi coursera student</h>
+  <body ng-app="NameCalculator">
+  <h1>Name Calculator</h1>
+    <div ng-controller="NameCalculatorController">
+      <div>
+      Your Name:
+      <input type="text" ng-model="name"
+      ng-keyup="displayNumeric();">             <!--to call displayNumeric() when keys are pressed in text field-->
+      </div>
+      <div>
+  Total numeric value of person's name is:{{lengthName}}
+  </div>
+    </div>
+<!--  <div ng-controller="MyFirstController">
+<h1>Hi</h1>
+{{sayHello()}}
+<input type="text" ng-model="name">
+The name I entered is:{{name}}
+  </div>
+  -->
   </body>
 </html>
